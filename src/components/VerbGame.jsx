@@ -6,8 +6,10 @@ import './VerbGame.css'
 const DIFFICULTY = {
   easy: 1,
   medium: 2,
-  hard: 3
+  hard: 3,
+  extreme: 3
 };
+
 
 // Utilidades para el localStorage
 const STORAGE_KEY = 'verb_probabilities';
@@ -43,7 +45,12 @@ const prepareGameData = (difficulty) => {
   }
 
   return selectedVerbs.map((verb) => {
-    const fields = ['base', 'past', 'participle'];
+    const fields = difficulty === 'extreme'
+			? ['spanish', 'base', 'past', 'participle']
+			: ['base', 'past', 'participle'];
+
+    if (difficulty === 'extreme') fields.push('spanish');
+
     const hideCount = DIFFICULTY[difficulty];
     const hideFields = getRandomIndexes(fields.length, hideCount).map(i => fields[i]);
 
@@ -56,6 +63,7 @@ const prepareGameData = (difficulty) => {
     };
   });
 };
+
 
 const loadProbabilities = () => {
   const data = localStorage.getItem(STORAGE_KEY);
@@ -167,9 +175,10 @@ export const VerbGame = () => {
 					<div className="mb-4">
 						<h4 className='text-center mt-2'>Choose Difficulty</h4>
 							<div className='d-flex justify-content-center'>
-								<Button className="me-2" onClick={() => handleStart('easy')}>Easy</Button>
-								<Button className="me-2" onClick={() => handleStart('medium')}>Medium</Button>
-								<Button onClick={() => handleStart('hard')}>Hard</Button>
+							<Button className="me-2" onClick={() => handleStart('easy')}>Easy</Button>
+							<Button className="me-2" onClick={() => handleStart('medium')}>Medium</Button>
+							<Button className="me-2" onClick={() => handleStart('hard')}>Hard</Button>
+							<Button variant="danger" onClick={() => handleStart('extreme')}>Extreme</Button>
 							</div>
 					</div>
 				)}
@@ -188,7 +197,30 @@ export const VerbGame = () => {
 							<React.Fragment key={index}>
 								{/* VISTA DE ESCRITORIO (md+) */}
 								<Row className="align-items-center mb-2 d-none d-md-flex">
-									<Col md={3}>{verb.spanish}</Col>
+								<Col md={3}>
+									{verb.hidden.includes('spanish') && difficulty === 'extreme' ? (
+										<>
+											<Form.Control
+												type="text"
+												disabled={verb.checked}
+												value={verb.answers['spanish'] || ''}
+												onChange={(e) => handleInputChange(index, 'spanish', e.target.value)}
+											/>
+											{verb.checked && (
+												<div className={`mt-1 small ${
+													verb.status['spanish'] === 'correct' ? 'text-success' : 'text-danger'
+												}`}>
+													{verb.status['spanish'] === 'correct'
+														? 'Correct!'
+														: `Correct: ${verb.spanish}`}
+												</div>
+											)}
+										</>
+									) : (
+										verb.spanish
+									)}
+								</Col>
+
 
 									{['base', 'past', 'participle'].map((field, i) => (
 										<Col md={2} key={i}>
@@ -227,10 +259,33 @@ export const VerbGame = () => {
 
 								{/* VISTA MÓVIL (xs, sm) */}
 								<div className="d-block d-md-none border rounded p-3 mb-3 shadow-sm bg-light">
-									<Row className="mb-2">
-										<Col xs={3}><strong>Spanish:</strong></Col>
-										<Col xs={9}>{verb.spanish}</Col>
-									</Row>
+								<Row className="mb-2">
+									<Col xs={3}><strong>Spanish:</strong></Col>
+									<Col xs={9}>
+										{verb.hidden.includes('spanish') ? (
+											<>
+												<Form.Control
+													type="text"
+													disabled={verb.checked}
+													value={verb.answers['spanish'] || ''}
+													onChange={(e) => handleInputChange(index, 'spanish', e.target.value)}
+													size="sm"
+												/>
+												{verb.checked && (
+													<div className={`mt-1 small ${
+														verb.status['spanish'] === 'correct' ? 'text-success' : 'text-danger'
+													}`}>
+														{verb.status['spanish'] === 'correct'
+															? 'Correct!'
+															: `Correct: ${verb.spanish}`}
+													</div>
+												)}
+											</>
+										) : (
+											<span>{verb.spanish}</span>
+										)}
+									</Col>
+								</Row>
 
 									{['base', 'past', 'participle'].map((field, i) => (
 										<Row className="mb-2" key={i}>
