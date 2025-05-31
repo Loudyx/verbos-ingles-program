@@ -1,0 +1,6 @@
+[
+  { "base": "go", "past": "went", "participle": "gone" },
+  { "base": "eat", "past": "ate", "participle": "eaten" },
+  { "base": "write", "past": "wrote", "participle": "written" }
+]
+

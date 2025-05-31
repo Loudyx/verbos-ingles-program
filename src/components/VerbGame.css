@@ -1,0 +1,27 @@
+
+.bgTitle_verbGame{
+    opacity: 0.8;
+    --sz: 3px;
+	--c1: #673ab7;
+	--c2: #37187a;
+	--ts: 50% / calc(var(--sz) * 18) calc(var(--sz) * 18);
+	--draw: var(--c1) 0 calc(var(--sz) * 5.85),
+		var(--c2) calc(calc(var(--sz) * 5.85) + 1px) calc(var(--sz) * 9.5),
+		#fff0 calc(calc(var(--sz) * 9.5) + 1px) 100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: radial-gradient(circle at 100% 100%, var(--draw)) var(--ts),
+		radial-gradient(circle at 0% 100%, var(--draw)) var(--ts),
+		radial-gradient(circle at 50% 50%, var(--draw)) var(--ts), var(--c1);
+}
+
+.bgTitle_verbGame h1 {
+    color: #37187a;
+    text-shadow:
+      -1px -1px 0 #fff,
+      1px -1px 0 #fff,
+      -1px 1px 0 #fff,
+      1px 1px 0 #fff;
+  }
+  

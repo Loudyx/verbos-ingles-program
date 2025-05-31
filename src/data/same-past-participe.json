@@ -1,0 +1,350 @@
+[
+    {
+        "spanish": "atar, ligar",
+        "base": "bind",
+        "past": "bound",
+        "participle": "bound"
+    },
+    {
+        "spanish": "criar, reproducir",
+        "base": "breed",
+        "past": "bred",
+        "participle": "bred"
+    },
+    {
+        "spanish": "traer",
+        "base": "bring",
+        "past": "brought",
+        "participle": "brought"
+    },
+    {
+        "spanish": "construir",
+        "base": "build",
+        "past": "built",
+        "participle": "built"
+    },
+    {
+        "spanish": "comprar",
+        "base": "buy",
+        "past": "bought",
+        "participle": "bought"
+    },
+    {
+        "spanish": "atrapar, coger",
+        "base": "catch",
+        "past": "caught",
+        "participle": "caught"
+    },
+    {
+        "spanish": "aferrarse, pegarse",
+        "base": "cling",
+        "past": "clung",
+        "participle": "clung"
+    },
+    {
+        "spanish": "arrastrarse, moverse sigilosamente",
+        "base": "creep",
+        "past": "crept",
+        "participle": "crept"
+    },
+    {
+        "spanish": "tratar, repartir",
+        "base": "deal",
+        "past": "dealt",
+        "participle": "dealt"
+    },
+    {
+        "spanish": "cavar",
+        "base": "dig",
+        "past": "dug",
+        "participle": "dug"
+    },
+    {
+        "spanish": "habitar, morar",
+        "base": "dwell",
+        "past": "dwelt",
+        "participle": "dwelt"
+    },
+    {
+        "spanish": "alimentar",
+        "base": "feed",
+        "past": "fed",
+        "participle": "fed"
+    },
+    {
+        "spanish": "sentir",
+        "base": "feel",
+        "past": "felt",
+        "participle": "felt"
+    },
+    {
+        "spanish": "pelear",
+        "base": "fight",
+        "past": "fought",
+        "participle": "fought"
+    },
+    {
+        "spanish": "encontrar",
+        "base": "find",
+        "past": "found",
+        "participle": "found"
+    },
+    {
+        "spanish": "huir",
+        "base": "flee",
+        "past": "fled",
+        "participle": "fled"
+    },
+    {
+        "spanish": "lanzar, arrojar",
+        "base": "fling",
+        "past": "flung",
+        "participle": "flung"
+    },
+    {
+        "spanish": "obtener, conseguir",
+        "base": "get",
+        "past": "got",
+        "participle": "gotten"
+    },
+    {
+        "spanish": "colgar",
+        "base": "hang",
+        "past": "hung",
+        "participle": "hung"
+    },
+    {
+        "spanish": "tener",
+        "base": "have",
+        "past": "had",
+        "participle": "had"
+    },
+    {
+        "spanish": "oír",
+        "base": "hear",
+        "past": "heard",
+        "participle": "heard"
+    },
+    {
+        "spanish": "sostener, aguantar",
+        "base": "hold",
+        "past": "held",
+        "participle": "held"
+    },
+    {
+        "spanish": "mantener, guardar",
+        "base": "keep",
+        "past": "kept",
+        "participle": "kept"
+    },
+    {
+        "spanish": "arrodillarse",
+        "base": "kneel",
+        "past": "knelt",
+        "participle": "knelt"
+    },
+    {
+        "spanish": "poner, colocar",
+        "base": "lay",
+        "past": "laid",
+        "participle": "laid"
+    },
+    {
+        "spanish": "liderar, guiar",
+        "base": "lead",
+        "past": "led",
+        "participle": "led"
+    },
+    {
+        "spanish": "saltar",
+        "base": "leap",
+        "past": "leapt",
+        "participle": "leapt"
+    },
+    {
+        "spanish": "dejar, abandonar",
+        "base": "leave",
+        "past": "left",
+        "participle": "left"
+    },
+    {
+        "spanish": "prestar",
+        "base": "lend",
+        "past": "lent",
+        "participle": "lent"
+    },
+    {
+        "spanish": "perder",
+        "base": "lose",
+        "past": "lost",
+        "participle": "lost"
+    },
+    {
+        "spanish": "hacer, fabricar",
+        "base": "make",
+        "past": "made",
+        "participle": "made"
+    },
+    {
+        "spanish": "significar, querer decir",
+        "base": "mean",
+        "past": "meant",
+        "participle": "meant"
+    },
+    {
+        "spanish": "encontrar, conocer",
+        "base": "meet",
+        "past": "met",
+        "participle": "met"
+    },
+    {
+        "spanish": "pagar",
+        "base": "pay",
+        "past": "paid",
+        "participle": "paid"
+    },
+    {
+        "spanish": "decir",
+        "base": "say",
+        "past": "said",
+        "participle": "said"
+    },
+    {
+        "spanish": "vender",
+        "base": "sell",
+        "past": "sold",
+        "participle": "sold"
+    },
+    {
+        "spanish": "enviar",
+        "base": "send",
+        "past": "sent",
+        "participle": "sent"
+    },
+    {
+        "spanish": "brillar",
+        "base": "shine",
+        "past": "shone",
+        "participle": "shone"
+    },
+    {
+        "spanish": "disparar",
+        "base": "shoot",
+        "past": "shot",
+        "participle": "shot"
+    },
+    {
+        "spanish": "sentarse",
+        "base": "sit",
+        "past": "sat",
+        "participle": "sat"
+    },
+    {
+        "spanish": "dormir",
+        "base": "sleep",
+        "past": "slept",
+        "participle": "slept"
+    },
+    {
+        "spanish": "deslizarse",
+        "base": "slide",
+        "past": "slid",
+        "participle": "slid"
+    },
+    {
+        "spanish": "gastar",
+        "base": "spend",
+        "past": "spent",
+        "participle": "spent"
+    },
+    {
+        "spanish": "girar",
+        "base": "spin",
+        "past": "spun",
+        "participle": "spun"
+    },
+    {
+        "spanish": "escupir",
+        "base": "spit",
+        "past": "spat",
+        "participle": "spat"
+    },
+    {
+        "spanish": "estar de pie, levantarse",
+        "base": "stand",
+        "past": "stood",
+        "participle": "stood"
+    },
+    {
+        "spanish": "pegar, atascar",
+        "base": "stick",
+        "past": "stuck",
+        "participle": "stuck"
+    },
+    {
+        "spanish": "picar (insecto)",
+        "base": "sting",
+        "past": "stung",
+        "participle": "stung"
+    },
+    {
+        "spanish": "golpear, atacar",
+        "base": "strike",
+        "past": "struck",
+        "participle": "struck"
+    },
+    {
+        "spanish": "ensartar, enlazar",
+        "base": "string",
+        "past": "strung",
+        "participle": "strung"
+    },
+    {
+        "spanish": "barrer",
+        "base": "sweep",
+        "past": "swept",
+        "participle": "swept"
+    },
+    {
+        "spanish": "balancearse, columpiar",
+        "base": "swing",
+        "past": "swung",
+        "participle": "swung"
+    },
+    {
+        "spanish": "enseñar",
+        "base": "teach",
+        "past": "taught",
+        "participle": "taught"
+    },
+    {
+        "spanish": "contar, decir",
+        "base": "tell",
+        "past": "told",
+        "participle": "told"
+    },
+    {
+        "spanish": "pensar",
+        "base": "think",
+        "past": "thought",
+        "participle": "thought"
+    },
+    {
+        "spanish": "entender",
+        "base": "understand",
+        "past": "understood",
+        "participle": "understood"
+    },
+    {
+        "spanish": "ganar",
+        "base": "win",
+        "past": "won",
+        "participle": "won"
+    },
+    {
+        "spanish": "enrollar, torcer",
+        "base": "wind",
+        "past": "wound",
+        "participle": "wound"
+    }
+]
