@@ -122,7 +122,7 @@ export const VerbGame = () => {
 							<Col className="d-none d-md-block" md={2}>Base</Col>
 							<Col className="d-none d-md-block" md={2}>Past</Col>
 							<Col className="d-none d-md-block" md={2}>Participle</Col>
-							<Col className="d-none d-md-block" md={3} xl={12} ><Button onClick={checkAll}>Check All</Button></Col>
+							<Col className="d-none d-md-block" md={3}><Button onClick={checkAll}>Check All</Button></Col>
 						</Row>
 
 						{gameData.map((verb, index) => (
@@ -218,19 +218,21 @@ export const VerbGame = () => {
 										</Button>
 									</div>
 
+
 								</div>
 
 							</React.Fragment>
 						))}
 
-						<Col className="d-none d-md-block" md={3} xl={12} ><Button onClick={checkAll}>Check All</Button></Col>
-						<Button 
-							size="sm" 
-							onClick={checkAll} 
-							className="w-100 bg-success"
-						>
-							Check All
-						</Button>
+						<div className="d-block d-md-none border rounded p-3 mb-3 shadow-sm bg-light">
+							<Button 
+								size="sm" 
+								onClick={checkAll} 
+								className="w-100 bg-success"
+							>
+								Check All
+							</Button>
+						</div>
 
 						<div className="mt-4 mb-2">
 							<h5>Score: {score}</h5>
