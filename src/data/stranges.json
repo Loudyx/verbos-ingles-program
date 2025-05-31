@@ -1,0 +1,44 @@
+[
+  {
+    "spanish": "inclinarse, apoyarse",
+    "base": "lean",
+    "past": "leant/leaned",
+    "participle": "leant/leaned"
+  },
+  {
+    "spanish": "aprender",
+    "base": "learn",
+    "past": "learned/learnt",
+    "participle": "learned/learnt"
+  },
+  {
+    "spanish": "iluminar, encender",
+    "base": "light",
+    "past": "lit/lighted",
+    "participle": "lit/lighted"
+  },
+  {
+    "spanish": "serrar",
+    "base": "saw",
+    "past": "sawed",
+    "participle": "sawn/sawed"
+  },
+  {
+    "spanish": "coser",
+    "base": "sew",
+    "past": "sewed",
+    "participle": "sewn/sewed"
+  },
+  {
+    "spanish": "esquilar, cortar (lana)",
+    "base": "shear",
+    "past": "sheared",
+    "participle": "shorn/sheared"
+  },
+  {
+    "spanish": "oler",
+    "base": "smell",
+    "past": "smelt/smelled",
+    "participle": "smelt/smelled"
+  }
+]

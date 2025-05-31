@@ -1,0 +1,26 @@
+[
+  {
+    "spanish": "morder",
+    "base": "bite",
+    "past": "bit",
+    "participle": "bitten"
+  },
+  {
+    "spanish": "olvidar",
+    "base": "forget",
+    "past": "forgot",
+    "participle": "forgotten"
+  },
+  {
+    "spanish": "obtener, conseguir",
+    "base": "get",
+    "past": "got",
+    "participle": "gotten"
+  },
+  {
+    "spanish": "escribir",
+    "base": "write",
+    "past": "wrote",
+    "participle": "written"
+  }
+]

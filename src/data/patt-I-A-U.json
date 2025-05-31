@@ -1,0 +1,122 @@
+[
+  {
+    "spanish": "ser, estar",
+    "base": "be",
+    "past": "was/were",
+    "participle": "been"
+  },
+  {
+    "spanish": "soportar, dar a luz",
+    "base": "bear",
+    "past": "bore",
+    "participle": "borne"
+  },
+  {
+    "spanish": "golpear",
+    "base": "beat",
+    "past": "beat",
+    "participle": "beaten"
+  },
+  {
+    "spanish": "hacer",
+    "base": "do",
+    "past": "did",
+    "participle": "done"
+  },
+  {
+    "spanish": "comer",
+    "base": "eat",
+    "past": "ate",
+    "participle": "eaten"
+  },
+  {
+    "spanish": "caer",
+    "base": "fall",
+    "past": "fell",
+    "participle": "fallen"
+  },
+  {
+    "spanish": "prohibir",
+    "base": "forbid",
+    "past": "forbade",
+    "participle": "forbidden"
+  },
+  {
+    "spanish": "ir",
+    "base": "go",
+    "past": "went",
+    "participle": "gone"
+  },
+  {
+    "spanish": "esconder",
+    "base": "hide",
+    "past": "hid",
+    "participle": "hidden"
+  },
+  {
+    "spanish": "yacer, mentir",
+    "base": "lie",
+    "past": "lay",
+    "participle": "lain"
+  },
+  {
+    "spanish": "segar",
+    "base": "mow",
+    "past": "mowed",
+    "participle": "mown"
+  },
+  {
+    "spanish": "montar, conducir",
+    "base": "ride",
+    "past": "rode",
+    "participle": "ridden"
+  },
+  {
+    "spanish": "mostrar",
+    "base": "show",
+    "past": "showed",
+    "participle": "shown"
+  },
+  {
+    "spanish": "robar",
+    "base": "steal",
+    "past": "stole",
+    "participle": "stolen"
+  },
+  {
+    "spanish": "caminar a grandes pasos",
+    "base": "stride",
+    "past": "strode",
+    "participle": "stridden"
+  },
+  {
+    "spanish": "jurar",
+    "base": "swear",
+    "past": "swore",
+    "participle": "sworn"
+  },
+  {
+    "spanish": "rasgar",
+    "base": "tear",
+    "past": "tore",
+    "participle": "torn"
+  },
+  {
+    "spanish": "pisar",
+    "base": "tread",
+    "past": "trod",
+    "participle": "trodden"
+  },
+  {
+    "spanish": "usar, vestir",
+    "base": "wear",
+    "past": "wore",
+    "participle": "worn"
+  },
+  {
+    "spanish": "volar",
+    "base": "fly",
+    "past": "flew",
+    "participle": "flown"
+  }
+]

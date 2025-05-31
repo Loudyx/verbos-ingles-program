@@ -1,0 +1,80 @@
+[
+  {
+    "spanish": "surgir, levantarse",
+    "base": "arise",
+    "past": "arose",
+    "participle": "arisen"
+  },
+  {
+    "spanish": "despertar",
+    "base": "awake",
+    "past": "awoke",
+    "participle": "awoken"
+  },
+  {
+    "spanish": "conducir",
+    "base": "drive",
+    "past": "drove",
+    "participle": "driven"
+  },
+  {
+    "spanish": "prever, anticipar",
+    "base": "foresee",
+    "past": "foresaw",
+    "participle": "foreseen"
+  },
+  {
+    "spanish": "perdonar",
+    "base": "forgive",
+    "past": "forgave",
+    "participle": "forgiven"
+  },
+  {
+    "spanish": "dar",
+    "base": "give",
+    "past": "gave",
+    "participle": "given"
+  },
+  {
+    "spanish": "adelantar, sobrepasar",
+    "base": "overtake",
+    "past": "overtook",
+    "participle": "overtaken"
+  },
+  {
+    "spanish": "participar",
+    "base": "partake",
+    "past": "partook",
+    "participle": "partaken"
+  },
+  {
+    "spanish": "subir, elevarse",
+    "base": "rise",
+    "past": "rose",
+    "participle": "risen"
+  },
+  {
+    "spanish": "ver",
+    "base": "see",
+    "past": "saw",
+    "participle": "seen"
+  },
+  {
+    "spanish": "sacudir",
+    "base": "shake",
+    "past": "shook",
+    "participle": "shaken"
+  },
+  {
+    "spanish": "esforzarse",
+    "base": "strive",
+    "past": "strove",
+    "participle": "striven"
+  },
+  {
+    "spanish": "tomar",
+    "base": "take",
+    "past": "took",
+    "participle": "taken"
+  }
+]

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Col, Row, Form, Container } from 'react-bootstrap';
-import verbsData from '../data/same-past-participe.json';
+import { getAllData } from '../functions/dataReader';
 import './VerbGame.css'
 
 const DIFFICULTY = {
@@ -10,6 +10,7 @@ const DIFFICULTY = {
   extreme: 3
 };
 
+const verbsData = getAllData();
 
 // Utilidades para el localStorage
 const STORAGE_KEY = 'verb_probabilities';
@@ -23,31 +24,36 @@ const getRandomIndexes = (total, count) => {
   return Array.from(indexes);
 };
 
-// Reemplaza prepareGameData con esto:
+
 const prepareGameData = (difficulty) => {
   const probabilities = loadProbabilities();
-  const availableVerbs = [...verbsData];
+
+  // Shuffle los verbos para randomizar
+  const shuffledVerbs = [...verbsData].sort(() => Math.random() - 0.5);
 
   const selectedVerbs = [];
-  const maxTries = verbsData.length * 2;
-
-  let tries = 0;
-
-  while (selectedVerbs.length < 15 && tries < maxTries) {
-    const candidate = availableVerbs[Math.floor(Math.random() * availableVerbs.length)];
+  
+  for (let i = 0; i < shuffledVerbs.length && selectedVerbs.length < 15; i++) {
+    const candidate = shuffledVerbs[i];
     const key = candidate.spanish;
     const prob = probabilities[key]?.ignoreProbability || 0;
 
-    if (Math.random() > prob || selectedVerbs.length + (maxTries - tries) <= 15) {
+    // Si pasa la probabilidad o se está quedando sin opciones, se añade
+    if (Math.random() > prob || shuffledVerbs.length - i <= 15 - selectedVerbs.length) {
       selectedVerbs.push(candidate);
     }
-    tries++;
+  }
+
+  // Si por alguna razón no se completan los 15, rellenar sin condiciones
+  if (selectedVerbs.length < 15) {
+    const remaining = verbsData.filter(v => !selectedVerbs.some(sv => sv.spanish === v.spanish));
+    selectedVerbs.push(...remaining.slice(0, 15 - selectedVerbs.length));
   }
 
   return selectedVerbs.map((verb) => {
     const fields = difficulty === 'extreme'
-			? ['spanish', 'base', 'past', 'participle']
-			: ['base', 'past', 'participle'];
+      ? ['spanish', 'base', 'past', 'participle']
+      : ['base', 'past', 'participle'];
 
     if (difficulty === 'extreme') fields.push('spanish');
 
@@ -63,6 +69,8 @@ const prepareGameData = (difficulty) => {
     };
   });
 };
+
+
 
 
 const loadProbabilities = () => {

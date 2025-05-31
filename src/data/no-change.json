@@ -1,0 +1,104 @@
+[
+  {
+    "spanish": "doblar",
+    "base": "bend",
+    "past": "bent",
+    "participle": "bent"
+  },
+  {
+    "spanish": "apostar",
+    "base": "bet",
+    "past": "bet",
+    "participle": "bet"
+  },
+  {
+    "spanish": "lanzar, echar",
+    "base": "cast",
+    "past": "cast",
+    "participle": "cast"
+  },
+  {
+    "spanish": "costar",
+    "base": "cost",
+    "past": "cost",
+    "participle": "cost"
+  },
+  {
+    "spanish": "cortar",
+    "base": "cut",
+    "past": "cut",
+    "participle": "cut"
+  },
+  {
+    "spanish": "golpear",
+    "base": "hit",
+    "past": "hit",
+    "participle": "hit"
+  },
+  {
+    "spanish": "herir, hacer daño",
+    "base": "hurt",
+    "past": "hurt",
+    "participle": "hurt"
+  },
+  {
+    "spanish": "tejer",
+    "base": "knit",
+    "past": "knit",
+    "participle": "knit"
+  },
+  {
+    "spanish": "permitir",
+    "base": "let",
+    "past": "let",
+    "participle": "let"
+  },
+  {
+    "spanish": "poner",
+    "base": "put",
+    "past": "put",
+    "participle": "put"
+  },
+  {
+    "spanish": "dejar, abandonar",
+    "base": "quit",
+    "past": "quit",
+    "participle": "quit"
+  },
+  {
+    "spanish": "leer",
+    "base": "read (/reed/)",
+    "past": "read (/red/)",
+    "participle": "read (/red/)"
+  },
+  {
+    "spanish": "poner, establecer",
+    "base": "set",
+    "past": "set",
+    "participle": "set"
+  },
+  {
+    "spanish": "cerrar (con fuerza)",
+    "base": "shut",
+    "past": "shut",
+    "participle": "shut"
+  },
+  {
+    "spanish": "dividir",
+    "base": "split",
+    "past": "split",
+    "participle": "split"
+  },
+  {
+    "spanish": "esparcir",
+    "base": "spread",
+    "past": "spread",
+    "participle": "spread"
+  },
+  {
+    "spanish": "empujar, clavar",
+    "base": "thrust",
+    "past": "thrust",
+    "participle": "thrust"
+  }
+]

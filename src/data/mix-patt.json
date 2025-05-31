@@ -1,0 +1,98 @@
+[
+  {
+    "spanish": "correr",
+    "base": "run",
+    "past": "ran",
+    "participle": "run"
+  },
+  {
+    "spanish": "venir",
+    "base": "come",
+    "past": "came",
+    "participle": "come"
+  },
+  {
+    "spanish": "convertirse",
+    "base": "become",
+    "past": "became",
+    "participle": "become"
+  },
+  {
+    "spanish": "superar",
+    "base": "overcome",
+    "past": "overcame",
+    "participle": "overcome"
+  },
+  {
+    "spanish": "soplar",
+    "base": "blow",
+    "past": "blew",
+    "participle": "blown"
+  },
+  {
+    "spanish": "dibujar, atraer",
+    "base": "draw",
+    "past": "drew",
+    "participle": "drawn"
+  },
+  {
+    "spanish": "crecer",
+    "base": "grow",
+    "past": "grew",
+    "participle": "grown"
+  },
+  {
+    "spanish": "saber, conocer",
+    "base": "know",
+    "past": "knew",
+    "participle": "known"
+  },
+  {
+    "spanish": "lanzar",
+    "base": "throw",
+    "past": "threw",
+    "participle": "thrown"
+  },
+  {
+    "spanish": "retirar",
+    "base": "withdraw",
+    "past": "withdrew",
+    "participle": "withdrawn"
+  },
+  {
+    "spanish": "romper",
+    "base": "break",
+    "past": "broke",
+    "participle": "broken"
+  },
+  {
+    "spanish": "elegir",
+    "base": "choose",
+    "past": "chose",
+    "participle": "chosen"
+  },
+  {
+    "spanish": "congelar",
+    "base": "freeze",
+    "past": "froze",
+    "participle": "frozen"
+  },
+  {
+    "spanish": "hablar",
+    "base": "speak",
+    "past": "spoke",
+    "participle": "spoken"
+  },
+  {
+    "spanish": "despertar",
+    "base": "wake",
+    "past": "woke",
+    "participle": "woken"
+  },
+  {
+    "spanish": "tejer",
+    "base": "weave",
+    "past": "wove",
+    "participle": "woven"
+  }
+]
