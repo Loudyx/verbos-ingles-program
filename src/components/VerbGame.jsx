@@ -122,55 +122,115 @@ export const VerbGame = () => {
 							<Col className="d-none d-md-block" md={2}>Base</Col>
 							<Col className="d-none d-md-block" md={2}>Past</Col>
 							<Col className="d-none d-md-block" md={2}>Participle</Col>
-							<Col md={3} xl={12} ><Button onClick={checkAll}>Check All</Button></Col>
+							<Col className="d-none d-md-block" md={3} xl={12} ><Button onClick={checkAll}>Check All</Button></Col>
 						</Row>
 
 						{gameData.map((verb, index) => (
-							<Row key={index} className="align-items-center mb-2">
-								<Col md={3} sm={6}>
-									{verb.spanish}
-								</Col>
+							<React.Fragment key={index}>
+								{/* VISTA DE ESCRITORIO (md+) */}
+								<Row className="align-items-center mb-2 d-none d-md-flex">
+									<Col md={3}>{verb.spanish}</Col>
 
-								
-								{['base', 'past', 'participle'].map((field, i) => (
-									<Col md={2} sm={6} key={i}>
-										{verb.hidden.includes(field) ? (
-											<>
-												<Form.Control
-													type="text"
-													disabled={verb.checked}
-													value={verb.answers[field] || ''}
-													onChange={(e) => handleInputChange(index, field, e.target.value)}
+									{['base', 'past', 'participle'].map((field, i) => (
+										<Col md={2} key={i}>
+											{verb.hidden.includes(field) ? (
+												<>
+													<Form.Control
+														type="text"
+														disabled={verb.checked}
+														value={verb.answers[field] || ''}
+														onChange={(e) => handleInputChange(index, field, e.target.value)}
 													/>
-												{verb.checked && (
-													<div
-													className={`mt-1 small ${
-														verb.status[field] === 'correct'
-														? 'text-success'
-														: 'text-danger'
-													}`}
-													>
-														{verb.status[field] === 'correct'
-															? 'Correct!'
-															: `Correct: ${verb[field]}`}
-													</div>
-												)}
-											</>
-										) : (
-											<span>{verb[field]}</span>
-										)}
+													{verb.checked && (
+														<div
+															className={`mt-1 small ${
+																verb.status[field] === 'correct' ? 'text-success' : 'text-danger'
+															}`}
+														>
+															{verb.status[field] === 'correct'
+																? 'Correct!'
+																: `Correct: ${verb[field]}`}
+														</div>
+													)}
+												</>
+											) : (
+												<span>{verb[field]}</span>
+											)}
+										</Col>
+									))}
+
+									<Col md={3}>
+										<Button onClick={() => checkRow(index)} disabled={verb.checked}>
+											Check
+										</Button>
 									</Col>
-								))}
-								<Col md={3}>
-									<Button
-										onClick={() => checkRow(index)}
-										disabled={verb.checked}
+								</Row>
+
+								{/* VISTA MÓVIL (xs, sm) */}
+								<div className="d-block d-md-none border rounded p-3 mb-3 shadow-sm bg-light">
+									<Row className="mb-2">
+										<Col xs={3}><strong>Spanish:</strong></Col>
+										<Col xs={9}>{verb.spanish}</Col>
+									</Row>
+
+									{['base', 'past', 'participle'].map((field, i) => (
+										<Row className="mb-2" key={i}>
+											<Col xs={3}>
+												<strong>{field.charAt(0).toUpperCase() + field.slice(1)}:</strong>
+											</Col>
+											<Col xs={9}>
+												{verb.hidden.includes(field) ? (
+													<>
+														<Form.Control
+															type="text"
+															disabled={verb.checked}
+															value={verb.answers[field] || ''}
+															onChange={(e) => handleInputChange(index, field, e.target.value)}
+															size="sm"
+														/>
+														{verb.checked && (
+															<div
+																className={`mt-1 small ${
+																	verb.status[field] === 'correct' ? 'text-success' : 'text-danger'
+																}`}
+															>
+																{verb.status[field] === 'correct'
+																	? 'Correct!'
+																	: `Correct: ${verb[field]}`}
+															</div>
+														)}
+													</>
+												) : (
+													<span className='ms-1'>{verb[field]}</span>
+												)}
+											</Col>
+										</Row>
+									))}
+
+									<div className="mt-3">
+										<Button 
+											size="sm" 
+											onClick={() => checkRow(index)} 
+											disabled={verb.checked} 
+											className="w-100"
 										>
-										Check
-									</Button>
-								</Col>
-							</Row>
+											Check
+										</Button>
+									</div>
+
+								</div>
+
+							</React.Fragment>
 						))}
+
+						<Col className="d-none d-md-block" md={3} xl={12} ><Button onClick={checkAll}>Check All</Button></Col>
+						<Button 
+							size="sm" 
+							onClick={checkAll} 
+							className="w-100 bg-success"
+						>
+							Check All
+						</Button>
 
 						<div className="mt-4 mb-2">
 							<h5>Score: {score}</h5>
