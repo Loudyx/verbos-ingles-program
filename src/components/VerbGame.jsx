@@ -9,6 +9,9 @@ const DIFFICULTY = {
   hard: 3
 };
 
+// Utilidades para el localStorage
+const STORAGE_KEY = 'verb_probabilities';
+
 //#region Mehtods
 const getRandomIndexes = (total, count) => {
   const indexes = new Set();
@@ -18,8 +21,26 @@ const getRandomIndexes = (total, count) => {
   return Array.from(indexes);
 };
 
+// Reemplaza prepareGameData con esto:
 const prepareGameData = (difficulty) => {
-  const selectedVerbs = verbsData.sort(() => 0.5 - Math.random()).slice(0, 15);
+  const probabilities = loadProbabilities();
+  const availableVerbs = [...verbsData];
+
+  const selectedVerbs = [];
+  const maxTries = verbsData.length * 2;
+
+  let tries = 0;
+
+  while (selectedVerbs.length < 15 && tries < maxTries) {
+    const candidate = availableVerbs[Math.floor(Math.random() * availableVerbs.length)];
+    const key = candidate.spanish;
+    const prob = probabilities[key]?.ignoreProbability || 0;
+
+    if (Math.random() > prob || selectedVerbs.length + (maxTries - tries) <= 15) {
+      selectedVerbs.push(candidate);
+    }
+    tries++;
+  }
 
   return selectedVerbs.map((verb) => {
     const fields = ['base', 'past', 'participle'];
@@ -36,8 +57,37 @@ const prepareGameData = (difficulty) => {
   });
 };
 
-//#region Component
+const loadProbabilities = () => {
+  const data = localStorage.getItem(STORAGE_KEY);
+  return data ? JSON.parse(data) : {};
+};
 
+const saveProbabilities = (probabilities) => {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(probabilities));
+};
+
+// Función para actualizar probabilidad según resultados
+const updateProbability = (verbKey, result, currentProbabilities) => {
+  const currentProb = currentProbabilities[verbKey]?.ignoreProbability || 0.15;
+  let newProb = currentProb;
+
+  if (result === 'perfect') {
+    newProb = Math.min(currentProb + 0.2, 0.95);
+  } else if (result === 'partial') {
+    newProb = Math.min(currentProb + 0.1, 0.95);
+  } else if (result === 'wrong') {
+    newProb = Math.max(currentProb - 0.2, 0);
+  } else if (result === 'unchecked') {
+    newProb = 0.15; // default
+  }
+
+  return {
+    ...currentProbabilities,
+    [verbKey]: { ignoreProbability: newProb }
+  };
+};
+
+//#region Component
 export const VerbGame = () => {
   const [difficulty, setDifficulty] = useState(null);
   const [gameData, setGameData] = useState([]);
@@ -75,6 +125,15 @@ export const VerbGame = () => {
     updated[index].checked = true;
     setGameData(updated);
     setScore(score + localScore);
+		const key = row.spanish;
+		let result = 'wrong';
+		const correctCount = Object.values(newStatus).filter((s) => s === 'correct').length;
+		if (correctCount === row.hidden.length) result = 'perfect';
+		else if (correctCount > 0) result = 'partial';
+		else if (correctCount === 0 && Object.values(row.answers).length === 0) result = 'unchecked';
+
+		const updatedProbs = updateProbability(key, result, loadProbabilities());
+		saveProbabilities(updatedProbs);
   };
 
   const checkAll = () => {
@@ -122,7 +181,7 @@ export const VerbGame = () => {
 							<Col className="d-none d-md-block" md={2}>Base</Col>
 							<Col className="d-none d-md-block" md={2}>Past</Col>
 							<Col className="d-none d-md-block" md={2}>Participle</Col>
-							<Col className="d-none d-md-block" md={3}><Button onClick={checkAll}>Check All</Button></Col>
+							<Col className="d-none d-md-block" md={2}><Button onClick={checkAll}>Check All</Button></Col>
 						</Row>
 
 						{gameData.map((verb, index) => (
@@ -159,7 +218,7 @@ export const VerbGame = () => {
 										</Col>
 									))}
 
-									<Col md={3}>
+									<Col md={2}>
 										<Button onClick={() => checkRow(index)} disabled={verb.checked}>
 											Check
 										</Button>
@@ -237,7 +296,7 @@ export const VerbGame = () => {
 						<div className="mt-4 mb-2">
 							<h5>Score: {score}</h5>
 							<Button className="me-2" onClick={handleReroll}>Re-roll</Button>
-							<Button variant="secondary" onClick={handleRestart}>Restart</Button>
+							<Button variant="secondary" onClick={handleRestart}>Restart Diff</Button>
 						</div>
 					</>
 				)}
